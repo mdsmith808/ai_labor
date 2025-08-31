@@ -1,0 +1,18 @@
+{
+  "extract_number": 15,
+  "samples": [
+    "cps2024_03s"
+  ],
+  "variables": [
+    "OCC",
+    "ASECWT",
+    "STATEFIP",
+    "AGE",
+    "SEX"
+  ],
+  "status": "completed",
+  "requested_format": "csv",
+  "description": "CPS extract (API v2)",
+  "download_url": "https://api.ipums.org/downloads/cps/api/v1/extracts/2628981/cps_00015.csv.gz",
+  "completed_at": "2025-08-30T22:38:10Z"
+}

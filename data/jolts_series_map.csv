@@ -1,0 +1,4 @@
+series_id,industry,metric
+JTU00000000JOR,Total,openings_rate
+JTU00000000HIR,Total,hires_rate
+JTU00000000SRR,Total,separations_rate
