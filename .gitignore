@@ -1,3 +1,7 @@
+cd /Users/mdsmith808/research/ai_labor
+
+# replace .gitignore with a repo-appropriate version
+cat > .gitignore <<'EOF'
 # --- OS / Editor / Env ---
 .DS_Store
 .vscode/
@@ -11,7 +15,7 @@ __pycache__/
 .env.*
 !.env.example
 
-# --- Build / Packaging (lightweight) ---
+# --- Build / Packaging ---
 dist/
 build/
 *.egg-info/
@@ -27,12 +31,14 @@ results/
 data/*
 
 # ...but keep these key artifacts
-!data/cps_occ_to_soc.csv
+!data/cps_occ_to_soc.csv        # OCC→SOC map (source CSV you built)
 !data/clean/
 !data/clean/**
-
-# ...and keep mapping tables you might save at root of data/
 !data/jolts_series_map.csv
 
-# ...but explicitly ignore heavyweight/local archives
+# ...but ignore heavyweight/local archives
 data/onet_db.zip
+EOF
+
+git add .gitignore
+GIT_EDITOR=true git rebase --continue   # continues without opening an editor
